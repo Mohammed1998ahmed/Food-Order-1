@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/themes/colors.dart';
 
 import 'core/routers/app_router.dart';
 import 'core/routers/router.dart';
@@ -20,9 +21,9 @@ class AppApp extends StatelessWidget {
         // You can use the library anywhere in the app even in theme
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          scaffoldBackgroundColor: Colors.redAccent,
+          scaffoldBackgroundColor: Colors_App.whiteColor,
         ),
-        initialRoute: Routers.splash,
+        initialRoute: Routers.welcome,
         onGenerateRoute: app_roters.genrateRoute,
       ),
     );
