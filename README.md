@@ -1,16 +1,15 @@
-# food_order
+# 🍽️ Food Order App - Flutter
 
-A new Flutter project.
+A modern and intuitive food ordering app built with Flutter. This project provides a complete user experience for browsing restaurants, viewing menus, adding items to a cart, and placing orders.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- 🏪 Browse restaurants and food categories  
+- 📋 View detailed menus with images and prices  
+- 🛒 Add items to cart and manage quantities  
+- ✅ Place orders and view order history  
+- 🔐 User authentication (optional with Firebase)  
+- 📱 Responsive design for Android and iOS
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- <img width="398" height="787" alt="Screenshot (118)" src="https://github.com/user-attachments/assets/7a874ec8-6a2a-4d2b-9fd1-2dafa578bbe2" />
+<img width="401" height="787" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/d416c168-6d04-46ec-8b99-3dd7dcf63e07" />
