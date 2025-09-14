@@ -5,6 +5,7 @@ import 'package:food_order/core/helper/space.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/core/themes/styles.dart';
 
+import '../../core/routers/router.dart';
 import '../../core/widgets/elevated_button_app.dart';
 import '../../core/widgets/sign_in_with_faceBook_or_google.dart';
 import '../../core/widgets/text_form_field_app.dart';
@@ -133,7 +134,9 @@ class _SignIN_ScreenState extends State<SignIN_Screen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushNamed(Routers.forgot_Password);
+                        },
                         child: Text(
                           'Forgot Password?',
                           style: Styles_App.font12GrayLight,

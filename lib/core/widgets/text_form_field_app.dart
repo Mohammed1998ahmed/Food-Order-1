@@ -26,9 +26,9 @@ class Text_Form_Field_App extends StatelessWidget {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        hintText: hintText ?? 'Email address',
+        hintText: hintText ?? 'Email address'.toUpperCase(),
         hintStyle: hintStyle ?? Styles_App.font16grayRegular,
-        labelText: labelText ?? 'Email address',
+        labelText: labelText ?? 'Email address'.toUpperCase(),
         labelStyle: labelStyle ?? Styles_App.font12GrayLight,
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
