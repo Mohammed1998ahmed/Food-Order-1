@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
+import 'package:food_order/feature/reset_Password/reset_Password.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
 
 import '../../feature/sign_in/sign_in_screen.dart';
@@ -17,7 +18,8 @@ class App_Roters {
         return MaterialPageRoute(builder: (_) => const SignIN_Screen());
       case Routers.forgot_Password:
         return MaterialPageRoute(builder: (_) => const Forgot_Password());
-
+      case Routers.Reset_Password:
+        return MaterialPageRoute(builder: (_) => const Reset_Password());
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
