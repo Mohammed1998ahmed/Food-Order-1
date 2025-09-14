@@ -28,4 +28,29 @@ class Styles_App {
     fontWeight: FontWeight.normal,
     color: Colors_App.blackColor,
   );
+  static TextStyle font16BlacksemiBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors_App.blackColor,
+  );
+  static TextStyle font33Blacklight = TextStyle(
+    fontSize: 33.sp,
+    fontWeight: FontWeight.w300,
+    color: Colors_App.blackColor,
+  );
+  static TextStyle font16grayRegular = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors_App.grayLightColor,
+  );
+  static TextStyle font12GrayLight = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors_App.grayLightColor,
+  );
+  static TextStyle font12whiteSemiBold = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors_App.whiteColor,
+  );
 }
