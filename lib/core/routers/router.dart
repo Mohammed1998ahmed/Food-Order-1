@@ -5,7 +5,7 @@ class Routers {
   static const String Reset_Password = '/Reset_Password';
   static const String splash = '/';
   static const String login = '/login';
-  static const String register = '/register';
+  static const String Creatte_Account = '/Create_Account';
   static const String home = '/home';
   static const String details = '/details';
 }
