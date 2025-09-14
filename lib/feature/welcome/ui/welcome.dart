@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
-import '../../core/routers/router.dart';
-import '../../core/widgets/elevated_button_app.dart';
-import 'ui/Name_And_Image.dart';
-import 'ui/Text_Welcom_And_Other.dart';
+import 'package:food_order/core/routers/router.dart';
+import '../../../core/widgets/elevated_button_app.dart';
+import 'Name_And_Image.dart';
+import 'Text_Welcom_And_Other.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -20,7 +20,7 @@ class Welcome extends StatelessWidget {
           hSpace(60),
           ElevatedButtonWidght(
             onPressed: () {
-              context.pushNamed(Routers.onBoarding);
+              context.pushNamed(Routers.login);
             },
           )
         ],

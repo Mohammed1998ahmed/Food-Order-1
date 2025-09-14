@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
 
-import '../../feature/login_Screen/ui/loginScreen.dart';
+import '../../feature/sign_in/sign_in_screen.dart';
 import 'router.dart';
 
 class App_Roters {
@@ -13,7 +13,7 @@ class App_Roters {
       case Routers.onBoarding:
         return MaterialPageRoute(builder: (_) => On_Bording_Screen());
       case Routers.login:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(builder: (_) => const SignIN_Screen());
 
       default:
         return MaterialPageRoute(

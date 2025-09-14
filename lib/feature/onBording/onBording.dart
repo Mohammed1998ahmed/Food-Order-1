@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/widgets/elevated_button_app.dart';
 import '../../core/widgets/base_title_and_image.dart';
 import 'ui/page_view_onBording.dart';
@@ -50,6 +52,9 @@ class On_Bording_Screen extends StatelessWidget {
                     duration: Duration(milliseconds: 300),
                     curve: Curves.easeIn,
                   );
+                } else {
+                  context.pushNamed(Routers
+                      .login); // Navigate to the next screen or perform any action
                 }
               },
             ),
