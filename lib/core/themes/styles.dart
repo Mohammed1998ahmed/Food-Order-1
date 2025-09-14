@@ -23,4 +23,9 @@ class Styles_App {
     fontWeight: FontWeight.bold,
     color: Colors_App.whiteColor,
   );
+  static TextStyle font24BlackRegular = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.normal,
+    color: Colors_App.blackColor,
+  );
 }

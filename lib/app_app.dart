@@ -23,7 +23,7 @@ class AppApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors_App.whiteColor,
         ),
-        initialRoute: Routers.welcome,
+        initialRoute: Routers.onBoarding,
         onGenerateRoute: app_roters.genrateRoute,
       ),
     );
