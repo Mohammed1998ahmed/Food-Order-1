@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/themes/colors.dart';
-import '../../../core/themes/styles.dart';
+import '../../../core/widgets/base_title_and_image.dart';
 
 class Name_And_Image extends StatelessWidget {
   const Name_And_Image({
@@ -32,32 +32,7 @@ class Name_And_Image extends StatelessWidget {
           left: 20.w,
           right: 20.w,
           top: 80.h,
-          child: Container(
-            width: 350.w,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    width: 65.w,
-                    height: 65.h,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('assets/image/logo.png'))),
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Text(
-                    "Tamang FoodService",
-                    maxLines: 2,
-                    textAlign: TextAlign.center,
-                    style: Styles_App.font37BlackBold,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          child: Base_Title_And_Image(),
         ),
         Positioned(
             top: 220.h,

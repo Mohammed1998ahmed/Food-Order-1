@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/feature/welcome/ui/welcome.dart';
+import 'package:food_order/feature/onBording/onBording.dart';
+import 'package:food_order/feature/welcome/welcome.dart';
 
 import '../../feature/login_Screen/ui/loginScreen.dart';
 import 'router.dart';
@@ -9,7 +10,8 @@ class App_Roters {
     switch (settings.name) {
       case Routers.welcome:
         return MaterialPageRoute(builder: (_) => const Welcome());
-
+      case Routers.onBoarding:
+        return MaterialPageRoute(builder: (_) => On_Bording_Screen());
       case Routers.login:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
 

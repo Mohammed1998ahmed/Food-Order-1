@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/core/helper/space.dart';
-import '../../../core/widgets/elevated_button_app.dart';
-import 'Name_And_Image.dart';
-import 'Text_Welcom_And_Other.dart';
+import '../../core/widgets/elevated_button_app.dart';
+import 'ui/Name_And_Image.dart';
+import 'ui/Text_Welcom_And_Other.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
