@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/core/themes/styles.dart';
 import '../../core/widgets/elevated_button_app.dart';
@@ -166,7 +167,9 @@ class _Create_Screen_ScreenState extends State<Create_Screen> {
                 hSpace(24),
 
                 ElevatedButtonWidght(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routers.Login_By_NumberPhone);
+                  },
                   name_button: 'SIGN UP',
                   horizontal: 140.w,
                 ),
