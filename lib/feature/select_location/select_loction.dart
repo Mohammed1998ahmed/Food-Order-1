@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 
 import '../../core/themes/styles.dart';
@@ -46,13 +49,18 @@ class SelectLocationPage extends StatelessWidget {
             hSpace(34),
             const Select_Type_Location(),
             hSpace(20),
-            const Select_Type_Location(
-              colorIcon: Colors_App.greyColor,
-              colorTextName: Colors_App.greyColor,
-              colorborder: Colors_App.greyColor,
-              colorbackground: Colors_App.lightGreyColor,
-              icon: Icons.location_on_outlined,
-              name_button: 'Enter a new address',
+            GestureDetector(
+              onTap: () {
+                context.pushNamed(Routers.enter_Location);
+              },
+              child: const Select_Type_Location(
+                colorIcon: Colors_App.greyColor,
+                colorTextName: Colors_App.greyColor,
+                colorborder: Colors_App.greyColor,
+                colorbackground: Colors_App.lightGreyColor,
+                icon: Icons.location_on_outlined,
+                name_button: 'Enter a new address',
+              ),
             ),
           ],
         ),
