@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   dio: ^5.9.0
   smooth_page_indicator: ^1.2.1
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_test:
