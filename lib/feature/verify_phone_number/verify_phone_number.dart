@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/core/themes/styles.dart';
 import 'package:pinput/pinput.dart';
@@ -95,7 +96,9 @@ class _Verify_NumberPhone_ScreenState extends State<Verify_NumberPhone> {
                 hSpace(34),
 
                 ElevatedButtonWidght(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routers.select_Location);
+                  },
                   name_button: 'Continue'.toUpperCase(),
                   horizontal: 130.w,
                 ),
