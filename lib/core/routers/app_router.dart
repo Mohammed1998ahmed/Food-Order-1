@@ -4,6 +4,7 @@ import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
+import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
 
 import '../../feature/sign_in/sign_in_screen.dart';
@@ -26,6 +27,8 @@ class App_Roters {
         return MaterialPageRoute(builder: (_) => const Create_Screen());
       case Routers.Login_By_NumberPhone:
         return MaterialPageRoute(builder: (_) => const Login_By_NumberPhone());
+      case Routers.verify_PhoneNumber:
+        return MaterialPageRoute(builder: (_) => const Verify_NumberPhone());
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
