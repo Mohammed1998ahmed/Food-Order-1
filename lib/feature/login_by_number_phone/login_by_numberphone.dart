@@ -91,7 +91,7 @@ class _Login_By_NumberPhone_ScreenState extends State<Login_By_NumberPhone> {
 
                 ElevatedButtonWidght(
                   onPressed: () {
-                    context.pushNamed(Routers.Reset_Password);
+                    context.pushNamed(Routers.verify_PhoneNumber);
                   },
                   name_button: 'SIGN UP',
                   horizontal: 140.w,

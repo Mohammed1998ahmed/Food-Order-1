@@ -7,6 +7,7 @@ class Routers {
   static const String login = '/login';
   static const String Creatte_Account = '/Create_Account';
   static const String Login_By_NumberPhone = '/Login_By_NumberPhone';
+  static const String verify_PhoneNumber = '/verify_PhoneNumber';
   static const String home = '/home';
   static const String details = '/details';
 }
