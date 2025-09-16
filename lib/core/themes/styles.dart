@@ -53,4 +53,24 @@ class Styles_App {
     fontWeight: FontWeight.w500,
     color: Colors_App.whiteColor,
   );
+  static TextStyle font20Blacklight = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w300,
+    color: Colors_App.blackColor,
+  );
+  static TextStyle font14blaclight = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w300,
+    color: Colors_App.blackColor,
+  );
+  static TextStyle font28BlacksemiBold = TextStyle(
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors_App.blackColor,
+  );
+  static TextStyle font20Balackbold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors_App.blackColor,
+  );
 }
