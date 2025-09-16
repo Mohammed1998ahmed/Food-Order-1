@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 
 import '../../core/themes/styles.dart';
@@ -93,94 +95,105 @@ class _EnterAddressPageState extends State<EnterAddressPage> {
               ),
 
               hSpace(20),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors_App.lightGreyColor,
-                    border: Border.all(color: Colors_App.greyColor),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 12.w),
-                  child: TextField(
-                    controller: _locationController,
-                    style: Styles_App.font16grayRegular,
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.location_on_outlined,
-                          color: Colors_App.greyColor),
-                      suffixIcon: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            _locationController.clear();
-                            filteredSuggestions.clear();
-                            setState(() {});
-                          },
-                          child: Container(
-                            width: 20.w,
-                            height: 20.w,
-                            decoration: const BoxDecoration(
-                              color: Colors_App.greyColor,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Icon(
-                                Icons.close,
-                                color: Colors_App.blackColor,
-                                size: 14.sp,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      hintText: 'Enter a new address',
-                      hintStyle: Styles_App.font16grayRegular,
-                      border: InputBorder.none,
-                    ),
-                  ),
-                ),
-              ),
+              TextFromFeild(),
               hSpace(16),
               // Display suggestions
               if (_locationController.text.isNotEmpty &&
                   filteredSuggestions.isNotEmpty)
-                Container(
-                  width: 330.w,
-                  height: 200.h,
-                  margin: EdgeInsets.only(top: 8.h),
-                  decoration: BoxDecoration(
-                    color: Colors_App.whiteColor,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors_App.greyColor,
-                        blurRadius: 4,
-                        offset: Offset(0, 2),
-                      ),
-                    ],
-                  ),
-                  child: ListView.builder(
-                    shrinkWrap: false,
-                    itemCount: filteredSuggestions.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        leading: Icon(Icons.location_on_outlined,
-                            color: Colors_App.greyColor),
-                        title: Text(
-                          filteredSuggestions[index],
-                          style: Styles_App.font16grayRegular,
-                        ),
-                        onTap: () {
-                          _locationController.text = filteredSuggestions[index];
-                          filteredSuggestions.clear();
-                          setState(() {});
-                        },
-                      );
-                    },
-                  ),
-                ),
+                ListAddress(),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Container ListAddress() {
+    return Container(
+      width: 330.w,
+      height: 200.h,
+      margin: EdgeInsets.only(top: 8.h),
+      decoration: BoxDecoration(
+        color: Colors_App.whiteColor,
+        borderRadius: BorderRadius.circular(8),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors_App.greyColor,
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: ListView.builder(
+        shrinkWrap: false,
+        itemCount: filteredSuggestions.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading:
+                Icon(Icons.location_on_outlined, color: Colors_App.greyColor),
+            title: Text(
+              filteredSuggestions[index],
+              style: Styles_App.font16grayRegular,
+            ),
+            onTap: () {
+              _locationController.text = filteredSuggestions[index];
+              filteredSuggestions.clear();
+              setState(() {});
+            },
+          );
+        },
+      ),
+    );
+  }
+
+  Padding TextFromFeild() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors_App.lightGreyColor,
+          border: Border.all(color: Colors_App.greyColor),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 12.w),
+        child: TextField(
+          controller: _locationController,
+          style: Styles_App.font16grayRegular,
+          decoration: InputDecoration(
+            icon: Icon(Icons.location_on_outlined, color: Colors_App.greyColor),
+            suffixIcon: Padding(
+              padding: EdgeInsets.all(15.0),
+              child: GestureDetector(
+                onTap: () {
+                  _locationController.clear();
+                  filteredSuggestions.clear();
+                  setState(() {});
+                },
+                child: Container(
+                  width: 20.w,
+                  height: 20.w,
+                  decoration: const BoxDecoration(
+                    color: Colors_App.greyColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors_App.blackColor,
+                      size: 14.sp,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            hintText: 'Enter a new address',
+            hintStyle: Styles_App.font16grayRegular,
+            border: InputBorder.none,
+          ),
+          textInputAction: TextInputAction.done,
+          onSubmitted: (value) {
+            context.pushNamed(Routers.home);
+          },
         ),
       ),
     );

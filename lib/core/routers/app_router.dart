@@ -9,6 +9,7 @@ import 'package:food_order/feature/select_location/select_loction.dart';
 import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
 
+import '../../feature/home/home_page.dart';
 import '../../feature/sign_in/sign_in_screen.dart';
 import 'router.dart';
 
@@ -35,6 +36,8 @@ class App_Roters {
         return MaterialPageRoute(builder: (_) => const SelectLocationPage());
       case Routers.enter_Location:
         return MaterialPageRoute(builder: (_) => const EnterAddressPage());
+      case Routers.home:
+        return MaterialPageRoute(builder: (_) => const HomePage());
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
