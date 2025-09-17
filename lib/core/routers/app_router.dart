@@ -7,6 +7,7 @@ import 'package:food_order/feature/onBording/onBording.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
 import 'package:food_order/feature/select_location/enter_Location.dart';
 import 'package:food_order/feature/select_location/select_loction.dart';
+import 'package:food_order/feature/single_restaurant/single_restaurant.dart';
 import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
 
@@ -41,6 +42,8 @@ class App_Roters {
         return MaterialPageRoute(builder: (_) => const HomePage());
       case Routers.featuredPartners:
         return MaterialPageRoute(builder: (_) => const Featured_Partners());
+      case Routers.singleRestaurant:
+        return MaterialPageRoute(builder: (_) => SingleRestaurantPage());
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
