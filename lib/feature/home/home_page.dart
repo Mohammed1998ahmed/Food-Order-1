@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/feature/home/data/local_data.dart';
 import 'package:food_order/feature/home/ui/stack_images.dart';
-
 import 'ui/all_restaurants_widgets.dart';
 import 'ui/app_Bar_Widgets.dart';
 import 'ui/list_View_Builder_Widgets.dart';
@@ -52,7 +53,9 @@ class _HomePageState extends State<HomePage> {
                     initialPage: currentPage),
                 hSpace(20),
                 TextSeeAllWidgets(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routers.featuredPartners);
+                  },
                 ),
                 hSpace(10),
                 const ListViewBuilderWidgets(images: LocalData.images),

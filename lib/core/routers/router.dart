@@ -11,5 +11,6 @@ class Routers {
   static const String select_Location = '/select_Location';
   static const String enter_Location = '/enter_Location';
   static const String home = '/home';
+  static const String featuredPartners = '/Featured_Partners';
   static const String details = '/details';
 }
