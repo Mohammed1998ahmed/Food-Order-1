@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/feature/create_Account/create_Account.dart';
+import 'package:food_order/feature/featured_Partners/featured_Partners.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
@@ -38,6 +39,8 @@ class App_Roters {
         return MaterialPageRoute(builder: (_) => const EnterAddressPage());
       case Routers.home:
         return MaterialPageRoute(builder: (_) => const HomePage());
+      case Routers.featuredPartners:
+        return MaterialPageRoute(builder: (_) => const Featured_Partners());
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
