@@ -73,4 +73,9 @@ class Styles_App {
     fontWeight: FontWeight.bold,
     color: Colors_App.blackColor,
   );
+  static TextStyle font18Blacklight = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w300,
+    color: Colors_App.blackColor,
+  );
 }
