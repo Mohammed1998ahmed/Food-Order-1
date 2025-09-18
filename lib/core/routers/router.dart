@@ -14,5 +14,6 @@ class Routers {
   static const String featuredPartners = '/Featured_Partners';
   static const String singleRestaurant = '/single_Restaurant';
   static const String addOrder = '/add_Order';
+  static const String yourOrder = '/your_order';
   static const String details = '/details';
 }
