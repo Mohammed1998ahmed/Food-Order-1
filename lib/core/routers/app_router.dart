@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/feature/add_Order/add_order.dart';
 import 'package:food_order/feature/create_Account/create_Account.dart';
 import 'package:food_order/feature/featured_Partners/featured_Partners.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
@@ -41,9 +42,18 @@ class App_Roters {
       case Routers.home:
         return MaterialPageRoute(builder: (_) => const HomePage());
       case Routers.featuredPartners:
-        return MaterialPageRoute(builder: (_) => const Featured_Partners());
+        return MaterialPageRoute(
+          builder: (_) => const Featured_Partners(),
+          settings: settings,
+        );
       case Routers.singleRestaurant:
-        return MaterialPageRoute(builder: (_) => SingleRestaurantPage());
+        return MaterialPageRoute(
+          builder: (_) => SingleRestaurantPage(),
+          settings: settings,
+        );
+      case Routers.addOrder:
+        return MaterialPageRoute(
+            builder: (_) => const Add_Order(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(

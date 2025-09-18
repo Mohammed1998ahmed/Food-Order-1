@@ -9,8 +9,10 @@ class List_Item_Feature_Column_Widgets extends StatelessWidget {
   const List_Item_Feature_Column_Widgets({
     super.key,
     required this.images,
+    required this.onTap,
   });
   final List<String> images;
+  final Function() onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,74 +23,77 @@ class List_Item_Feature_Column_Widgets extends StatelessWidget {
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
-            return Container(
-              width: 332.w,
-              height: 110.h,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 110.w,
-                    height: 110.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.r),
-                        image: DecorationImage(
-                            image: AssetImage(images[index]),
-                            fit: BoxFit.cover)),
-                  ),
-                  wSpace(18),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        child: Text(
-                          "Cookie Sandwich",
-                          style: Styles_App.font18Blacklight
-                              .copyWith(color: Colors_App.blackColor),
+            return GestureDetector(
+              onTap: onTap,
+              child: Container(
+                width: 332.w,
+                height: 110.h,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 110.w,
+                      height: 110.h,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.r),
+                          image: DecorationImage(
+                              image: AssetImage(images[index]),
+                              fit: BoxFit.cover)),
+                    ),
+                    wSpace(18),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Text(
+                            "Cookie Sandwich",
+                            style: Styles_App.font18Blacklight
+                                .copyWith(color: Colors_App.blackColor),
+                          ),
                         ),
-                      ),
-                      hSpace(6),
-                      Container(
-                        width: 204.w,
-                        child: Text(
-                          "Shortbread, chocolate turtle cookies, and red velvet.",
-                          style: Styles_App.font14blaclight
-                              .copyWith(color: Colors_App.blackColor),
+                        hSpace(6),
+                        Container(
+                          width: 204.w,
+                          child: Text(
+                            "Shortbread, chocolate turtle cookies, and red velvet.",
+                            style: Styles_App.font14blaclight
+                                .copyWith(color: Colors_App.blackColor),
+                          ),
                         ),
-                      ),
-                      hSpace(12),
-                      Container(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              "\$\$",
-                              style: Styles_App.font14whitebold
-                                  .copyWith(color: Colors_App.blackColor),
-                            ),
-                            wSpace(7),
-                            CircleAvatar(
-                              radius: 3.r,
-                              backgroundColor: Colors_App.greyColor,
-                            ),
-                            wSpace(7),
-                            Text(
-                              "Chinese",
-                              style: Styles_App.font14whitebold
-                                  .copyWith(color: Colors_App.blackColor),
-                            ),
-                            wSpace(64),
-                            Text(
-                              "AUD\$10",
-                              style: Styles_App.font14whitebold
-                                  .copyWith(color: Colors_App.primaryColor),
-                            ),
-                          ],
+                        hSpace(12),
+                        Container(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "\$\$",
+                                style: Styles_App.font14whitebold
+                                    .copyWith(color: Colors_App.blackColor),
+                              ),
+                              wSpace(7),
+                              CircleAvatar(
+                                radius: 3.r,
+                                backgroundColor: Colors_App.greyColor,
+                              ),
+                              wSpace(7),
+                              Text(
+                                "Chinese",
+                                style: Styles_App.font14whitebold
+                                    .copyWith(color: Colors_App.blackColor),
+                              ),
+                              wSpace(64),
+                              Text(
+                                "AUD\$10",
+                                style: Styles_App.font14whitebold
+                                    .copyWith(color: Colors_App.primaryColor),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
-                  )
-                ],
+                      ],
+                    )
+                  ],
+                ),
               ),
             );
           },
