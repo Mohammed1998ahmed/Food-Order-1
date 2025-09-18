@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/feature/featured_Partners/data/data_local.dart';
 import '../../../core/helper/space.dart';
@@ -117,6 +119,12 @@ class All_Restaurants_Widgets extends StatelessWidget {
                         title: 'Most Populars',
                       ),
                       List_Item_Feature_Column_Widgets(
+                        onTap: () {
+                          context.pushNamed(Routers.addOrder, arguments: {
+                            'name': "Tacos Nanchas",
+                            'category': "Chinese, American",
+                          });
+                        },
                         images: Data_Local.images,
                       ),
                       hSpace(14),
@@ -124,6 +132,7 @@ class All_Restaurants_Widgets extends StatelessWidget {
                         title: 'Sea Foods',
                       ),
                       List_Item_Feature_Column_Widgets(
+                        onTap: () {},
                         images: Data_Local.images,
                       ),
                     ],
