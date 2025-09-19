@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/feature/add_Order/add_order.dart';
+import 'package:food_order/feature/add_Payment_Method/add_payment_method.dart';
 import 'package:food_order/feature/create_Account/create_Account.dart';
 import 'package:food_order/feature/featured_Partners/featured_Partners.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
@@ -58,6 +59,9 @@ class App_Roters {
       case Routers.yourOrder:
         return MaterialPageRoute(
             builder: (_) => const Your_Order_Page(), settings: settings);
+      case Routers.addPaymentMethod:
+        return MaterialPageRoute(
+            builder: (_) => Add_Payment_method_page(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/core/widgets/elevated_button_app.dart';
 import '../../core/widgets/add_special_widget.dart';
@@ -41,7 +43,9 @@ class Your_Order_Page extends StatelessWidget {
             ),
             hSpace(20),
             ElevatedButtonWidght(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routers.addPaymentMethod);
+              },
               name_button: 'Continue (AUD \$30)',
               horizontal: 100.w,
             )

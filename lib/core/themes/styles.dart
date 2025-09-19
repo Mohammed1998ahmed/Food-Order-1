@@ -78,4 +78,9 @@ class Styles_App {
     fontWeight: FontWeight.w300,
     color: Colors_App.blackColor,
   );
+  static TextStyle font24BlacksemiBold = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors_App.blackColor,
+  );
 }
