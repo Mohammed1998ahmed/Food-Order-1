@@ -11,7 +11,7 @@ import 'package:food_order/feature/select_location/select_loction.dart';
 import 'package:food_order/feature/single_restaurant/single_restaurant.dart';
 import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart';
 import 'package:food_order/feature/welcome/welcome.dart';
-import 'package:food_order/feature/your_order/ui/your_order.dart';
+import 'package:food_order/feature/your_order/your_order.dart';
 
 import '../../feature/home/home_page.dart';
 import '../../feature/sign_in/sign_in_screen.dart';
