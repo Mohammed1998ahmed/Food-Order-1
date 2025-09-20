@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
+import 'package:food_order/core/routers/router.dart';
 
 import '../../../core/themes/colors.dart';
 import '../../../core/themes/styles.dart';
@@ -38,7 +40,9 @@ class AppBarWidgets extends StatelessWidget {
               ],
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routers.filter);
+                },
                 child: Text(
                   'Filter',
                   style: Styles_App.font16BlackRegular,
