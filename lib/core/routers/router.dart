@@ -18,4 +18,5 @@ class Routers {
   static const String addPaymentMethod = '/add_payment_method';
   static const String filter = '/filter';
   static const String navBarButtom = '/navBarButtom';
+  static const String searchCategory = '/Search_Category';
 }

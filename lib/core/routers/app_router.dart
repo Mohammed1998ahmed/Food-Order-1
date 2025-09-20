@@ -8,6 +8,7 @@ import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
+import 'package:food_order/feature/search/search_Catagory.dart';
 import 'package:food_order/feature/select_location/enter_Location.dart';
 import 'package:food_order/feature/select_location/select_loction.dart';
 import 'package:food_order/feature/single_restaurant/single_restaurant.dart';
@@ -70,6 +71,9 @@ class App_Roters {
       case Routers.navBarButtom:
         return MaterialPageRoute(
             builder: (_) => MainNavigationScreen(), settings: settings);
+      case Routers.searchCategory:
+        return MaterialPageRoute(
+            builder: (_) => SearchCategory(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
