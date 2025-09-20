@@ -192,7 +192,7 @@ class _EnterAddressPageState extends State<EnterAddressPage> {
           ),
           textInputAction: TextInputAction.done,
           onSubmitted: (value) {
-            context.pushNamed(Routers.home);
+            context.pushNamed(Routers.navBarButtom);
           },
         ),
       ),
