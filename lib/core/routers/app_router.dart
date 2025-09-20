@@ -15,6 +15,7 @@ import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart'
 import 'package:food_order/feature/welcome/welcome.dart';
 import 'package:food_order/feature/your_order/your_order.dart';
 
+import '../../feature/bottom_navigation_bar/bottomNavigationBar.dart';
 import '../../feature/home/home_page.dart';
 import '../../feature/sign_in/sign_in_screen.dart';
 import 'router.dart';
@@ -66,6 +67,9 @@ class App_Roters {
       case Routers.filter:
         return MaterialPageRoute(
             builder: (_) => Filter_Page(), settings: settings);
+      case Routers.navBarButtom:
+        return MaterialPageRoute(
+            builder: (_) => MainNavigationScreen(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
