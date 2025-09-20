@@ -3,6 +3,7 @@ import 'package:food_order/feature/add_Order/add_order.dart';
 import 'package:food_order/feature/add_Payment_Method/add_payment_method.dart';
 import 'package:food_order/feature/create_Account/create_Account.dart';
 import 'package:food_order/feature/featured_Partners/featured_Partners.dart';
+import 'package:food_order/feature/filter/filter.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
@@ -62,6 +63,9 @@ class App_Roters {
       case Routers.addPaymentMethod:
         return MaterialPageRoute(
             builder: (_) => Add_Payment_method_page(), settings: settings);
+      case Routers.filter:
+        return MaterialPageRoute(
+            builder: (_) => Filter_Page(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
