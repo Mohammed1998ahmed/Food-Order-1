@@ -19,4 +19,6 @@ class Routers {
   static const String filter = '/filter';
   static const String navBarButtom = '/navBarButtom';
   static const String searchCategory = '/Search_Category';
+  static const String profileInformation = '/profileInformation';
+  static const String profileChangePassword = '/profileChangePassword';
 }
