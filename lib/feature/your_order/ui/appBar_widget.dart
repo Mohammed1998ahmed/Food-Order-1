@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/core/helper/extenations.dart';
 
 import '../../../core/themes/colors.dart';
 import '../../../core/themes/styles.dart';
@@ -13,7 +14,9 @@ class AppBar_Widget extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors_App.whiteColor,
       leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          context.pop();
+        },
         icon: Icon(
           Icons.close,
           size: 16,
