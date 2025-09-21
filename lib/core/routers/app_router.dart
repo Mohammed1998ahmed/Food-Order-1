@@ -7,6 +7,8 @@ import 'package:food_order/feature/filter/filter.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
+import 'package:food_order/feature/profile/change_password_widget.dart';
+import 'package:food_order/feature/profile/profile_information.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
 import 'package:food_order/feature/search/search_Catagory.dart';
 import 'package:food_order/feature/select_location/enter_Location.dart';
@@ -74,6 +76,12 @@ class App_Roters {
       case Routers.searchCategory:
         return MaterialPageRoute(
             builder: (_) => SearchCategory(), settings: settings);
+      case Routers.profileInformation:
+        return MaterialPageRoute(
+            builder: (_) => ProfileInformationPage(), settings: settings);
+      case Routers.profileChangePassword:
+        return MaterialPageRoute(
+            builder: (_) => ChangePasswordPage(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(

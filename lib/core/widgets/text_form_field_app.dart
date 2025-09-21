@@ -12,6 +12,7 @@ class Text_Form_Field_App extends StatelessWidget {
     this.labelStyle,
     this.suffixIcon,
     this.obscureText,
+    this.keyboardType,
   });
 
   final TextEditingController controller;
@@ -21,10 +22,12 @@ class Text_Form_Field_App extends StatelessWidget {
   final TextStyle? hintStyle;
   final TextStyle? labelStyle;
   final Widget? suffixIcon;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      keyboardType: keyboardType ?? TextInputType.name,
       decoration: InputDecoration(
         hintText: hintText ?? 'Email address'.toUpperCase(),
         hintStyle: hintStyle ?? Styles_App.font16grayRegular,
