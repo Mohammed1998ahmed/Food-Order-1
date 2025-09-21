@@ -2,19 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
-import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/themes/colors.dart';
 import 'package:food_order/core/widgets/elevated_button_app.dart';
+import '../../core/routers/router.dart';
 import '../../core/widgets/add_special_widget.dart';
 import 'ui/all_price_widget.dart';
 import 'ui/appBar_widget.dart';
+import 'ui/buttom_sheet_widget.dart';
 import 'ui/listView_itme_widget.dart';
 
 class Your_Order_Page extends StatelessWidget {
-  const Your_Order_Page({super.key});
-
+  const Your_Order_Page({super.key, this.moveTo});
+  final bool? moveTo;
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)?.settings.arguments;
+    if (args == null || args is! Map<String, dynamic>) {
+      return const Center(child: Text("No data passed"));
+    }
+    bool moveTo = args['moveTo'];
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -44,7 +50,9 @@ class Your_Order_Page extends StatelessWidget {
             hSpace(20),
             ElevatedButtonWidght(
               onPressed: () {
-                context.pushNamed(Routers.addPaymentMethod);
+                moveTo == true
+                    ? context.pushNamed(Routers.addPaymentMethod)
+                    : showOrderConfirmationSheet(context);
               },
               name_button: 'Continue (AUD \$30)',
               horizontal: 100.w,
