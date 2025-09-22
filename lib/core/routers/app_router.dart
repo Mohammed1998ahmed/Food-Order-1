@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/feature/Refer_to_Friends/refer_to_Friends.dart';
 import 'package:food_order/feature/add_Order/add_order.dart';
 import 'package:food_order/feature/add_Payment_Method/add_payment_method.dart';
 import 'package:food_order/feature/create_Account/create_Account.dart';
@@ -98,6 +99,9 @@ class App_Roters {
       case Routers.socialAccount:
         return MaterialPageRoute(
             builder: (_) => SocialAccountPage(), settings: settings);
+      case Routers.refersToFriends:
+        return MaterialPageRoute(
+            builder: (_) => ReferToFriendsPage(), settings: settings);
 
       default:
         return MaterialPageRoute(
