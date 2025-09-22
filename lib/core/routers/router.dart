@@ -26,4 +26,5 @@ class Routers {
   static const String profileLocation = '/profileLocation';
   static const String socialAccount = '/socialAccount';
   static const String refersToFriends = '/refersToFriends';
+  static const String scanCard = '/scanCard';
 }

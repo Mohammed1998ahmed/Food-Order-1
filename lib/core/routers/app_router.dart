@@ -14,6 +14,7 @@ import 'package:food_order/feature/profile/change_password_widget.dart';
 import 'package:food_order/feature/profile/profile_information.dart';
 import 'package:food_order/feature/profile/social_page.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
+import 'package:food_order/feature/scan_card/scan_card_page.dart';
 import 'package:food_order/feature/search/search_Catagory.dart';
 import 'package:food_order/feature/select_location/enter_Location.dart';
 import 'package:food_order/feature/select_location/profile_location.dart';
@@ -102,6 +103,9 @@ class App_Roters {
       case Routers.refersToFriends:
         return MaterialPageRoute(
             builder: (_) => ReferToFriendsPage(), settings: settings);
+      case Routers.scanCard:
+        return MaterialPageRoute(
+            builder: (_) => ScanCardPage(), settings: settings);
 
       default:
         return MaterialPageRoute(

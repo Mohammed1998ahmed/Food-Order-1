@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_order/core/helper/extenations.dart';
 import 'package:food_order/core/helper/space.dart';
+import 'package:food_order/core/routers/router.dart';
 import 'package:food_order/core/widgets/elevated_button_app.dart';
 import 'ui/details_text_widght.dart';
 import 'ui/scan_card_button_widgets.dart';
@@ -22,8 +24,11 @@ class Add_Payment_method_page extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              hSpace(20),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  context.pop();
+                },
                 child: Icon(
                   Icons.arrow_back_ios,
                   size: 16,
@@ -46,7 +51,11 @@ class Add_Payment_method_page extends StatelessWidget {
                 ),
               ),
               hSpace(16),
-              Scan_Card_Button_Widgets()
+              Scan_Card_Button_Widgets(
+                onTap: () {
+                  context.pushNamed(Routers.scanCard);
+                },
+              )
             ],
           ),
         ),
