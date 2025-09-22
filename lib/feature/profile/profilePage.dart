@@ -92,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           title: 'Refer to Friends',
                           subtitle: 'Invite friends and earn rewards',
                           onTap: () {
-                            Navigator.pushNamed(context, '/referral');
+                            context.pushNamed(Routers.refersToFriends);
                           },
                         ),
                       ],
