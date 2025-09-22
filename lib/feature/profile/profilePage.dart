@@ -44,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 hSpace(24),
                 Container(
                     width: 335.w,
-                    height: 432.h,
+                    height: 520.h,
                     child: Column(
                       children: [
                         ProfileTile(
@@ -77,6 +77,14 @@ class _ProfilePageState extends State<ProfilePage> {
                           subtitle: 'Manage your delivery addresses',
                           onTap: () {
                             context.pushNamed(Routers.profileLocation);
+                          },
+                        ),
+                        ProfileTile(
+                          icon: Icons.facebook,
+                          title: 'Social Account',
+                          subtitle: 'Manage your delivery addresses',
+                          onTap: () {
+                            context.pushNamed(Routers.socialAccount);
                           },
                         ),
                         ProfileTile(

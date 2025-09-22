@@ -23,5 +23,6 @@ class Routers {
   static const String profileChangePassword = '/profileChangePassword';
   static const String paymentMethod = '/paymentMethod';
   static const String paymentMethodType = '/paymentMethodType';
-  static const String profileLocation = '\profileLocation';
+  static const String profileLocation = '/profileLocation';
+  static const String socialAccount = '/socialAccount';
 }
