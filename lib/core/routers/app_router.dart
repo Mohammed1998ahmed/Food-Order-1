@@ -14,6 +14,7 @@ import 'package:food_order/feature/profile/profile_information.dart';
 import 'package:food_order/feature/reset_Password/reset_Password.dart';
 import 'package:food_order/feature/search/search_Catagory.dart';
 import 'package:food_order/feature/select_location/enter_Location.dart';
+import 'package:food_order/feature/select_location/profile_location.dart';
 import 'package:food_order/feature/select_location/select_loction.dart';
 import 'package:food_order/feature/single_restaurant/single_restaurant.dart';
 import 'package:food_order/feature/verify_phone_number/verify_phone_number.dart';
@@ -90,6 +91,10 @@ class App_Roters {
       case Routers.paymentMethodType:
         return MaterialPageRoute(
             builder: (_) => PaymentMethodTypePAge(), settings: settings);
+      case Routers.profileLocation:
+        return MaterialPageRoute(
+            builder: (_) => ProfileLocationPage(), settings: settings);
+
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
