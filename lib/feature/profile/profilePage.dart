@@ -76,7 +76,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           title: 'Locations',
                           subtitle: 'Manage your delivery addresses',
                           onTap: () {
-                            Navigator.pushNamed(context, '/locations');
+                            context.pushNamed(Routers.profileLocation);
                           },
                         ),
                         ProfileTile(
