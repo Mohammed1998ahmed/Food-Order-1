@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/themes/styles.dart';
-import 'paymentMethodTile.dart';
+import '../../core/themes/styles.dart';
+import 'ui/paymentMethodTile.dart';
 
 class PaymentMethodTypePAge extends StatelessWidget {
   const PaymentMethodTypePAge({super.key});
