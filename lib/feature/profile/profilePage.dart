@@ -141,7 +141,9 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       ProfileTile(
                         icon: Icons.book,
-                        onTap: () {},
+                        onTap: () {
+                          context.pushNamed(Routers.scanCard);
+                        },
                         subtitle: 'Frequently asked questions',
                         title: 'FAQ',
                       ),

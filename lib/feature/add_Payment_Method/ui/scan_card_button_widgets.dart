@@ -8,12 +8,13 @@ import '../../../core/themes/styles.dart';
 class Scan_Card_Button_Widgets extends StatelessWidget {
   const Scan_Card_Button_Widgets({
     super.key,
+    required this.onTap,
   });
-
+  final Function() onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Center(
         child: Container(
           width: 330.w,

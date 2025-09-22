@@ -126,7 +126,8 @@ class _Add_OrderState extends State<Add_Order> {
                   Center(
                     child: ElevatedButtonWidght(
                       onPressed: () {
-                        context.pushNamed(Routers.yourOrder);
+                        context.pushNamed(Routers.yourOrder,
+                            arguments: {'moveTo': true});
                       },
                       horizontal: 85.w,
                       vertical: 15.h,
