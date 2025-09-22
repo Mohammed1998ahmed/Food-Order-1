@@ -21,4 +21,6 @@ class Routers {
   static const String searchCategory = '/Search_Category';
   static const String profileInformation = '/profileInformation';
   static const String profileChangePassword = '/profileChangePassword';
+  static const String paymentMethod = '/paymentMethod';
+  static const String paymentMethodType = '/paymentMethodType';
 }

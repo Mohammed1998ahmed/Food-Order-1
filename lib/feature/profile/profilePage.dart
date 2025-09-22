@@ -68,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           title: 'Payment Methods',
                           subtitle: 'Add credit/debit cards',
                           onTap: () {
-                            Navigator.pushNamed(context, '/payment');
+                            context.pushNamed(Routers.paymentMethod);
                           },
                         ),
                         ProfileTile(
