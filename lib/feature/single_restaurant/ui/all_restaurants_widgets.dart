@@ -65,7 +65,11 @@ class All_Restaurants_Widgets extends StatelessWidget {
                       ),
                       const Text_Categorys_Widget(),
                       hSpace(9),
-                      const Ratings_TExt_Widgets(),
+                      Ratings_TExt_Widgets(
+                        onTap: () {
+                          context.pushNamed(Routers.reviewFood);
+                        },
+                      ),
                       hSpace(24),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,

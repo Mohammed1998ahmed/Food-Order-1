@@ -7,6 +7,7 @@ import 'package:food_order/feature/featured_Partners/featured_Partners.dart';
 import 'package:food_order/feature/filter/filter.dart';
 import 'package:food_order/feature/forgot_Password/forgot_Password.dart';
 import 'package:food_order/feature/login_by_number_phone/login_by_numberphone.dart';
+import 'package:food_order/feature/map/map.dart';
 import 'package:food_order/feature/onBording/onBording.dart';
 import 'package:food_order/feature/payment_method/paymentMethodType.dart';
 import 'package:food_order/feature/payment_method/payment_method.dart';
@@ -106,7 +107,9 @@ class App_Roters {
       case Routers.scanCard:
         return MaterialPageRoute(
             builder: (_) => ScanCardPage(), settings: settings);
-
+      case Routers.reviewFood:
+        return MaterialPageRoute(
+            builder: (_) => FoodReviewScreen(), settings: settings);
       default:
         return MaterialPageRoute(
             builder: (_) => const Scaffold(
