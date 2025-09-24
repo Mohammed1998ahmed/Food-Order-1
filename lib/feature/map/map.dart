@@ -281,7 +281,7 @@ class ReviewCard extends StatelessWidget {
 //   }
 
 //   Future<void> getRoute() async {
-//     const apiKey = 'AIzaSyBJjDpq0S-cRzOkfeC2NtIvch3sVxXmWjs';
+//     const apiKey = '${{API_KEY_GOOGLE_MAP}}';
 //     final url =
 //         'https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${destination.latitude},${destination.longitude}&key=$apiKey';
 
