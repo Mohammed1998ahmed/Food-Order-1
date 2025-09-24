@@ -21,42 +21,44 @@ class Add_Payment_method_page extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              hSpace(20),
-              GestureDetector(
-                onTap: () {
-                  context.pop();
-                },
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  size: 16,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                hSpace(20),
+                GestureDetector(
+                  onTap: () {
+                    context.pop();
+                  },
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    size: 16,
+                  ),
                 ),
-              ),
-              hSpace(24),
-              Details_Text_Widght(),
-              hSpace(34),
-              Text_Field_Widghts(
-                  controller: controller,
-                  controller1: controller1,
-                  controller2: controller2),
-              hSpace(308),
-              Center(
-                child: ElevatedButtonWidght(
-                  onPressed: () {},
-                  name_button: 'Add Card'.toUpperCase(),
-                  horizontal: 132.w,
-                  vertical: 16.h,
+                hSpace(24),
+                Details_Text_Widght(),
+                hSpace(34),
+                Text_Field_Widghts(
+                    controller: controller,
+                    controller1: controller1,
+                    controller2: controller2),
+                hSpace(308),
+                Center(
+                  child: ElevatedButtonWidght(
+                    onPressed: () {},
+                    name_button: 'Add Card'.toUpperCase(),
+                    horizontal: 132.w,
+                    vertical: 16.h,
+                  ),
                 ),
-              ),
-              hSpace(16),
-              Scan_Card_Button_Widgets(
-                onTap: () {
-                  context.pushNamed(Routers.scanCard);
-                },
-              )
-            ],
+                hSpace(16),
+                Scan_Card_Button_Widgets(
+                  onTap: () {
+                    context.pushNamed(Routers.scanCard);
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
